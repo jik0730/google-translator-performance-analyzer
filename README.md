@@ -1,4 +1,3 @@
-
 # Documentation
 ### Analysis Flow and Development Guide
 ###### 1. Download Test Data of English-Korean Parallel Corpus (The data is from KAIST Semantic Web Research Center)
