@@ -29,6 +29,10 @@ Authentication for this service is done via an `API Key`. To obtain an API Key:
 
 3. From the **Credentials** page, create a new **API Key** or use an existing one for your project.
 
+4. Set the environmental variable before starting a program like this.
+
+     > $ export GOOGLE_APPLICATION_CREDENTIALS=<path_to_service_account_file>
+
 ### Install Dependencies
 
 1. Install `pip`_ and `virtualenv`_ if you do not already have them.
