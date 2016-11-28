@@ -35,8 +35,7 @@ Authentication for this service is done via an `API Key`. To obtain an API Key:
 
 2. Create a virtualenv. Samples are compatible with Python 3.4+.
 
-     > $ virtualenv -p python3 env
-     
+     > $ virtualenv -p python3 env <br />
      > $ source env/bin/activate
 
 3. Install the dependencies needed to run the samples.
