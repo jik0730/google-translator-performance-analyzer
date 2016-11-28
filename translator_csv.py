@@ -9,6 +9,9 @@ def run_translator(csv_file):
         print ("Input file is not a csv file.")
         return
 
+    # Define file name of output file
+    out_file_name = csv_file.split("/")[-1];
+
     # Bunch of corpuses to be translated
     corpuses = []
     rows = []
@@ -29,7 +32,7 @@ def run_translator(csv_file):
     target = 'es'
 
     # Write to csv_file with the results
-    out_csv = open ("out.csv", 'w')
+    out_csv = open ("./data/output/"+out_file_name, 'w')
     writer = csv.writer (out_csv)
     writer.writerow (rows[0])
     i = 1

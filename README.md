@@ -47,9 +47,11 @@ Authentication for this service is done via an `API Key`. To obtain an API Key:
 
 ### For step 2
 
-To run the program with csv file `sample.csv`:
+To run the program with csv file `./data/input/sample.csv`:
 
-	 $ python translator_csv.py sample.csv
+	 $ python translator_csv.py ./data/input/sample.csv
+
+Then it will output `./data/output/sample.csv`.
 
 If the file as an argument is not the form of csv, it will print `Input file is not a csv file.`.
 
