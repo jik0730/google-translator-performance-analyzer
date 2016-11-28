@@ -31,11 +31,11 @@ Authentication for this service is done via an `API Key`. To obtain an API Key:
 
 4. Set the environmental variable before starting a program like this.
 
-     > $ export GOOGLE_APPLICATION_CREDENTIALS=<path_to_service_account_file>
+     > $ export GOOGLE_APPLICATION_CREDENTIALS=path_to_service_account_file
 
 ### Install Dependencies
 
-1. Install `pip`_ and `virtualenv`_ if you do not already have them.
+1. Install `pip` and `virtualenv` if you do not already have them.
 
 2. Create a virtualenv. Samples are compatible with Python 3.4+.
 
