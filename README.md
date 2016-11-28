@@ -1,4 +1,4 @@
-# Quality Engineering Term Project - Quality Evalutation of Google Translator
+# Quality Engineering Term Project <br /> - Quality Evalutation of Google Translator
 
 
 ## Analysis Flow and Development Guide
@@ -40,7 +40,15 @@ Authentication for this service is done via an `API Key`. To obtain an API Key:
 
 3. Install the dependencies needed to run the samples.
 
-     >  $ pip install -r requirements.txt
+     > $ pip install -r requirements.txt
 
+## Samples
 
+### For step 2
+
+To run the program with csv file `sample.csv`:
+
+	 > $ python translator_csv.py sample.csv
+
+If the file as an argument is not the form of csv, it will print `Input file is not a csv file.`.
 
