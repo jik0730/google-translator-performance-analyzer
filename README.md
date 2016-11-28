@@ -7,9 +7,13 @@
   * Download codes
   * Combine txt files
   * Convert to csv file
+
 2. Translate the source language (English) into Target Language (Spanish) using Google Cloud Translator
+
 3. Calculate RIBES score using NLTK
+
 4. Find the numbers of leaves and levels of dependence parse tree using NLTK.
+
 5. Quality Engineering analysis on the processed data
 
 
@@ -20,16 +24,22 @@
 Authentication for this service is done via an `API Key`. To obtain an API Key:
 
 1. Open the `Cloud Platform Console`
+
 2. Make sure that billing is enabled for your project.
+
 3. From the **Credentials** page, create a new **API Key** or use an existing one for your project.
 
 ### Install Dependencies
 
 1. Install `pip`_ and `virtualenv`_ if you do not already have them.
+
 2. Create a virtualenv. Samples are compatible with Python 3.4+.
+
      > $ virtualenv -p python3 env <br />
      > $ source env/bin/activate
+
 3. Install the dependencies needed to run the samples.
+
      > $ pip install -r requirements.txt
 
 
@@ -38,7 +48,9 @@ Authentication for this service is done via an `API Key`. To obtain an API Key:
 ### For step 2
 
 To run the program with csv file `sample.csv`:
+
 	 $ python translator_csv.py sample.csv
+
 If the file as an argument is not the form of csv, it will print `Input file is not a csv file.`.
 
 
