@@ -4,9 +4,9 @@
 ## Analysis Flow and Development Guide
 
 1. Download Test Data of English-Korean Parallel Corpus (The data is from KAIST Semantic Web Research Center)
-  - Download codes
-  - Combine txt files
-  - Convert to csv file
+  * Download codes
+  * Combine txt files
+  * Convert to csv file
 
 2. Translate the source language (English) into Target Language (Spanish) using Google Cloud Translator
 
@@ -48,7 +48,7 @@ Authentication for this service is done via an `API Key`. To obtain an API Key:
 
 To run the program with csv file `sample.csv`:
 
-	 > $ python translator_csv.py sample.csv
+	 $ python translator_csv.py sample.csv
 
 If the file as an argument is not the form of csv, it will print `Input file is not a csv file.`.
 
