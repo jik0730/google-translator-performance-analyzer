@@ -75,7 +75,7 @@ If the file as an argument is not the form of csv, it will print `Input file is 
 
 To run the program with csv file `./data/output/sample.csv` which is a file generated on step 3:
 
-	 $ python translator_csv.py ./data/output/sample.csv
+	 $ python calculate_ribes.py ./data/output/sample.csv
 
 Then it will output `./data/ribes/sample.csv`.
 
