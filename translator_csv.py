@@ -42,13 +42,14 @@ def run_translator(csv_file):
         translation = translate_client.translate(
             corpus,
             target_language=target)
-        print(u'Text: {}'.format(corpus))
-        print(u'Translation: {}'.format(translation['translatedText']))
+        #print(u'Text: {}'.format(corpus))
+        #print(u'Translation: {}'.format(translation['translatedText']))
         rows[i][2] = translation['translatedText']
         writer.writerow (rows[i])
         i += 1
 
-
+    print ("Success on translating coupuses!!")
+    out_csv.close()
     # [END translator_csv]
 
 
