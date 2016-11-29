@@ -1,1 +1,2 @@
 google-cloud-translate==0.21.0
+nltk
