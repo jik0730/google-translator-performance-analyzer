@@ -73,15 +73,24 @@ If the file as an argument is not the form of csv, it will print `Input file is 
 
 ### For step 3,
 
-To run the program with csv file `./data/output/sample.csv` which is a file generated on step 3:
+To run the program with csv file `./data/output/sample.csv` which is a file generated on step 2:
 
 	 $ python calculate_ribes.py ./data/output/sample.csv
 
 Then it will output `./data/ribes/sample.csv`.
+
+### For step 4,
+
+To run the program with csv file `./data/ribes/sample.csv` which is a file generated on step 3:
+
+	 $ python calculate_features.py ./data/ribes/sample.csv
+
+Then it will output `./data/features/sample.csv`.
 
 
 ## References
 
 * [Google Cloud Translation API Documentation](https://cloud.google.com/translate/docs/)
 * [Python Samlple Application](https://github.com/GoogleCloudPlatform/python-docs-samples/tree/master/translate)
+* [NLTK (Natural Language Toolkit) API](http://www.nltk.org/index.html)
 
