@@ -61,6 +61,20 @@ Authentication for this service is done via an `API Key`. To obtain an API Key:
 
 ## Samples
 
+### Main Function including steps 2, 3, 4
+
+To run main program with csv file `./data/input/sample.csv`:
+
+   $ python main.py ./data/input/sample.csv
+
+Then it will output `./data/output/sample.csv`.
+
+Also it will output `./data/ribes/sample.csv`.
+
+Also it will output `./data/features/sample.csv`.
+
+If the file as an argument is not the form of csv, it will print `Input file is not a csv file.`.
+
 ### For step 2,
 
 To run the program with csv file `./data/input/sample.csv`:
