@@ -65,7 +65,7 @@ Authentication for this service is done via an `API Key`. To obtain an API Key:
 
 To run main program with csv file `./data/input/sample.csv`:
 
-   $ python main.py ./data/input/sample.csv
+    $ python translator_csv.py ./data/input/sample.csv
 
 Then it will output `./data/output/sample.csv`.
 
