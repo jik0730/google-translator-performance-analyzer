@@ -3,7 +3,7 @@
 
 ## Analysis Flow and Development Guide
 
-1. Download Test Data of English-Korean Parallel Corpus (The data is from KAIST Semantic Web Research Center)
+1. Download Test Data of English-Spanish Parallel Corpus (The data is from KAIST Semantic Web Research Center)
   * Download codes
   * Combine txt files
   * Convert to csv file
@@ -107,4 +107,3 @@ Then it will output `./data/features/sample.csv`.
 * [Google Cloud Translation API Documentation](https://cloud.google.com/translate/docs/)
 * [Python Samlple Application](https://github.com/GoogleCloudPlatform/python-docs-samples/tree/master/translate)
 * [NLTK (Natural Language Toolkit) API](http://www.nltk.org/index.html)
-
