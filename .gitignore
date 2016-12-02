@@ -1,3 +1,4 @@
-data
+data/*
+result/*
 env
 __pycache__
