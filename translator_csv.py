@@ -3,7 +3,38 @@ import sys
 # Imports the Google Cloud client library
 from google.cloud import translate
 
-def run_translator(csv_file):
+target = 'es'
+
+def run_translator(input_filename):
+    translate_client = translate.Client()
+
+    results = []
+
+    with open(input_filename) as csvfile:
+        reader = csv.DictReader(csvfile)
+
+        for row in reader:
+            source_sentence = row['english']
+            translation = translate_client.translate(
+                source_sentence,
+                target_language=target)
+            translated_text = translation['translatedText']
+            result = row
+            result['translated_spanish'] = translated_text
+            results.append(result)
+
+    filename = input_filename.split('/')[-1].split('.')[0]
+    output_filename = 'result/' + filename +  '-translated.csv'
+    with open(output_filename, 'w') as csvfile:
+        fieldnames = ['english', 'spanish', 'translated_spanish']
+        writer =  csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_NONE)
+        writer.writeheader()
+        for corpus in results:
+            writer.writerow(corpus)
+
+
+
+"""def run_translator(csv_file):
     # Check input file whether being csv.
     if csv_file.split(".")[-1] != "csv":
         print ("Input file is not a csv file.")
@@ -16,11 +47,11 @@ def run_translator(csv_file):
     corpuses = []
     rows = []
 
-    in_csv = open (csv_file, 'r')
-    reader = csv.reader (in_csv)
+    in_csv = open(csv_file, 'r')
+    reader = csv.reader(in_csv)
     for row in reader:
-        corpuses.append (row[0])
-        rows.append (row)
+        corpuses.append(row[0])
+        rows.append(row)
 
     del corpuses[0]
     in_csv.close ()
@@ -50,7 +81,7 @@ def run_translator(csv_file):
 
     print ("Success on translating coupuses!!")
     out_csv.close()
-    # [END translator_csv]
+    # [END translator_csv]"""
 
 
 if __name__ == '__main__':
