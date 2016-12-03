@@ -17,7 +17,7 @@ def calculate_ribes(input_filename):
             hypothesis = row['translated_spanish'].split(" ")
 
             try:
-                score = round(corpus_ribes(reference_sentence, hypothesis), 4)
+                score = round(corpus_ribes([[reference_sentence]], [hypothesis]), 4)
             except ZeroDivisionError:
                 score = 0
 
@@ -31,6 +31,7 @@ def calculate_ribes(input_filename):
     output_filename = 'result/' + filename +  '.csv'
     with open(output_filename, 'w') as csvfile:
         fieldnames = ['english', 'spanish', 'translated_spanish', 'ribes_score']
+        
         writer =  csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         for corpus in results:
