@@ -12,7 +12,10 @@ def main(csv_file):
     # Define file name of output file
     #out_file_name = csv_file.split("/")[-1];
 
-    run_translator(csv_file)
+    run_translator("data/es-en.csv")
+    calculate_ribes("result/es-en.csv")
+    calculate_features("result/es-en.csv")
+
     #calculate_ribes("data/output/"+out_file_name)
     #calculate_features("data/ribes/"+out_file_name)
 

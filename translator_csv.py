@@ -24,10 +24,11 @@ def run_translator(input_filename):
             results.append(result)
 
     filename = input_filename.split('/')[-1].split('.')[0]
-    output_filename = 'result/' + filename +  '-translated.csv'
+    output_filename = 'result/' + filename +  '.csv'
     with open(output_filename, 'w') as csvfile:
         fieldnames = ['english', 'spanish', 'translated_spanish']
-        writer =  csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_NONE)
+        writer =  csv.DictWriter(csvfile, fieldnames=fieldnames)
+        #writer = csv.writer(sys.stdout, delimiter="|", quoting=csv.QUOTE_NONE, quotechar='')
         writer.writeheader()
         for corpus in results:
             writer.writerow(corpus)

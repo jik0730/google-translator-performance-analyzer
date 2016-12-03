@@ -41,7 +41,7 @@ def combine_raw_files_to_csv(filename, number_of_lines):
 
     with open(filename, 'w') as csvfile:
         fieldnames = ['english', 'spanish']
-        writer =  csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_NONE)
+        writer =  csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         for corpus in parallel_corpus:
             writer.writerow(corpus)
