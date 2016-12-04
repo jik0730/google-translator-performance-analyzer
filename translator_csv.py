@@ -35,6 +35,8 @@ def run_translator(input_filename):
         for corpus in results:
             writer.writerow(corpus)
 
+    print("Success on translating sentences!!")
+
 
 """
 Description: Detecting whether the sentence is not one sentence.

@@ -35,6 +35,8 @@ def calculate_ribes(input_filename):
         writer.writeheader()
         for corpus in results:
             writer.writerow(corpus)
+
+    print("Success on calculating RIBES scores!!")
             
 
 if __name__ == '__main__':

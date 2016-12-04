@@ -38,6 +38,8 @@ def calculate_features(input_filename):
         for corpus in results:
             writer.writerow(corpus)
 
+    print("Success on calculating features' scores!!")
+
 
 """
 Description: This is calculating number of words.
