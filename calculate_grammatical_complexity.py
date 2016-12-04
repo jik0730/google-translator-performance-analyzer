@@ -64,7 +64,7 @@ def calculate_gc(text):
 
     return row
 
-
+"""
 def calculate_grammatical_complexity(input_filename):
     if input_filename.split(".")[-1] != "csv":
         print ("Input file is not a csv file.")
@@ -98,7 +98,7 @@ def calculate_grammatical_complexity(input_filename):
         writer.writeheader()
         for corpus in results:
             writer.writerow(corpus)
-
+"""
 
 if __name__ == '__main__':
     calculate_features(sys.argv[1])

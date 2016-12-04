@@ -15,6 +15,8 @@ def run_translator(input_filename):
 
         for row in reader:
             source_sentence = row['english']
+            if not detect_sentence(source_sentence):
+                continue
             translation = translate_client.translate(
                 source_sentence,
                 target_language=target)
@@ -34,55 +36,19 @@ def run_translator(input_filename):
             writer.writerow(corpus)
 
 
+"""
+Description: Detecting whether the sentence is not one sentence.
+Input (str): A sentence.
+Output (str): T/F
+"""
+def detect_sentence(sentence):
+    tokens = sentence.split(" ");
+    length = len(tokens)
+    for i in range(0, length):
+        if tokens[i][-1] == "." and i != length - 1:
+            return False
 
-"""def run_translator(csv_file):
-    # Check input file whether being csv.
-    if csv_file.split(".")[-1] != "csv":
-        print ("Input file is not a csv file.")
-        return
-
-    # Define file name of output file
-    out_file_name = csv_file.split("/")[-1];
-
-    # Bunch of corpuses to be translated
-    corpuses = []
-    rows = []
-
-    in_csv = open(csv_file, 'r')
-    reader = csv.reader(in_csv)
-    for row in reader:
-        corpuses.append(row[0])
-        rows.append(row)
-
-    del corpuses[0]
-    in_csv.close ()
-
-    # Instantiates a client
-    translate_client = translate.Client()
-
-    # The target language
-    target = 'es'
-
-    # Write to csv_file with the results
-    out_csv = open ("./data/output/"+out_file_name, 'w')
-    writer = csv.writer (out_csv)
-    writer.writerow (rows[0])
-    i = 1
-
-    # Translates some corpuses into Spanish
-    for corpus in corpuses:
-        translation = translate_client.translate(
-            corpus,
-            target_language=target)
-        #print(u'Text: {}'.format(corpus))
-        #print(u'Translation: {}'.format(translation['translatedText']))
-        rows[i][2] = translation['translatedText']
-        writer.writerow (rows[i])
-        i += 1
-
-    print ("Success on translating coupuses!!")
-    out_csv.close()
-    # [END translator_csv]"""
+    return True
 
 
 if __name__ == '__main__':
