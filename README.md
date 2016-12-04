@@ -79,11 +79,7 @@ To run main program with csv file `./data/input/sample.csv`:
 
     $ python main.py ./data/es-en.csv
 
-Then it will output `./data/output/sample.csv`.
-
-Also it will output `./data/ribes/sample.csv`.
-
-Also it will output `./data/features/sample.csv`.
+Then it will output `./result/es-en.csv`.
 
 If the file as an argument is not the form of csv, it will print `Input file is not a csv file.`.
 
@@ -94,8 +90,6 @@ To run the program with csv file `./data/es-en.csv`:
 	 $ python translator_csv.py ./data/es-en.csv
 
 Then it will output `./result/es-en.csv`.
-
-If the file as an argument is not the form of csv, it will print `Input file is not a csv file.`.
 
 ### For step 3,
 
