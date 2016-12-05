@@ -23,9 +23,18 @@ def calculate_gc(text):
         edge_index = token.edge_index
         trace = []
         trace.append(edge_index)
-        while edge_index is not root_edge_index:
+
+        print("aaa")
+        import time
+        start = time.time()
+        interval = 0.5
+        while edge_index is not root_edge_index and time.time() < start + interval:
             edge_index = annotations.tokens[edge_index].edge_index
             trace.append(edge_index)
+        print("bbb")
+
+        if time.time() >= start + interval:
+            trace = []
 
         traces.append(trace)
 
@@ -79,7 +88,7 @@ def calculate_grammatical_complexity(input_filename):
             result = row
 
             gc = calculate_gc(row['english'])
-            
+
             result['noun'] = gc['noun']
             result['adj'] = gc['adj']
             result['verb'] = gc['verb']

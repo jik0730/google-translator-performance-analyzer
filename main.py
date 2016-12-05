@@ -9,8 +9,8 @@ def main(csv_file):
         print ("Input file is not a csv file.")
         return
 
-    run_translator("data/es-en.csv")
-    calculate_ribes("result/es-en.csv")
+    #run_translator("data/es-en.csv")
+    #calculate_ribes("result/es-en.csv")
     calculate_features("result/es-en.csv")
 
     print("Success on executing main!!")

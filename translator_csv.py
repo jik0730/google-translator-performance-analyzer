@@ -10,13 +10,29 @@ def run_translator(input_filename):
 
     results = []
 
+    import time
+    seconds_passed = time.time()
+    number_of_alphabets_processed = 0
+
     with open(input_filename) as csvfile:
         reader = csv.DictReader(csvfile)
 
         for row in reader:
+            print(number_of_alphabets_processed, time.time() - seconds_passed)
+
+            if number_of_alphabets_processed > 95000:
+                time.sleep(105 - (time.time() - seconds_passed))
+                number_of_alphabets_processed = 0
+                seconds_passed = time.time()
+
+            if time.time() - seconds_passed > 95:
+                time.sleep(8)
+                number_of_alphabets_processed = 0
+                seconds_passed = time.time()
+
             source_sentence = row['english']
-            if not detect_sentence(source_sentence):
-                continue
+            #if not detect_sentence(source_sentence):
+        #        continue
             translation = translate_client.translate(
                 source_sentence,
                 target_language=target)
@@ -24,6 +40,10 @@ def run_translator(input_filename):
             result = row
             result['translated_spanish'] = translated_text
             results.append(result)
+
+            number_of_alphabets_processed = number_of_alphabets_processed + len(source_sentence)
+
+
 
     filename = input_filename.split('/')[-1].split('.')[0]
     output_filename = 'result/' + filename +  '.csv'

@@ -33,9 +33,9 @@ def combine_raw_files_to_csv(filename, number_of_lines):
                 "english": x,
                 "spanish": y
             }
-            parallel_corpus.append(line)
-
-            i = i + 1
+            if x.count(".") + x.count("?") + x.count("!") == 1 and len(x) < 550:
+                parallel_corpus.append(line)
+                i = i + 1
             if i > number_of_lines:
                 break
 

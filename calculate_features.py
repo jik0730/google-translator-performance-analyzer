@@ -17,6 +17,7 @@ def calculate_features(input_filename):
             result['number_of_words'] = feature_1(row['english'])
             result['number_of_alphabets'] = feature_2(row['english'])
 
+
             # Feature_3, 4, 5, 6, 7, 8
             gc = calculate_gc(row['english'])
             result['noun'] = gc['noun']
@@ -25,6 +26,7 @@ def calculate_features(input_filename):
             result['adp'] = gc['adp']
             result['conj'] = gc['conj']
             result['height_of_parse_tree'] = gc['height']
+            print(result)
 
             results.append(result)
 
